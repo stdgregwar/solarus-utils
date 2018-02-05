@@ -1,0 +1,60 @@
+_____________________________________
+
+Solarus ALTTP pack 1.5.6 (2016-11-26)
+_____________________________________
+
+* Add a rupees counter and an item box to the HUD.
+* Add icons to be used for the HUD.
+* Add PNG fonts with digits.
+* Make the HUD compatible with old HUD element scripts.
+
+_____________________________________
+
+Solarus ALTTP pack 1.5.5 (2016-11-19)
+_____________________________________
+
+* Add a hearts displayer.
+
+
+Solarus ALTTP pack 1.5.4 (2016-11-12)
+_____________________________________
+
+* Add a door sprite in the light world tileset.
+
+_____________________________________
+
+Solarus ALTTP pack 1.5.3 (2016-09-29)
+_____________________________________
+
+* Remove unexistent sprite declaration added by mistake.
+* Remove a non-Zelda NPC sprite.
+
+_____________________________________
+
+Solarus ALTTP pack 1.5.2 (2016-09-29)
+_____________________________________
+
+* Add lots of NPC sprites and reorganize existing ones.
+
+_____________________________________
+
+Solarus ALTTP pack 1.5.1 (2016-08-28)
+_____________________________________
+
+* Add a changelog.
+* Add scripts to start the game.
+* Add a Zelda ALTTP dialog box.
+* Fix green bush sprite.
+* Improve tilesets.
+
+_____________________________________
+
+Solarus ALTTP pack 1.5.0 (2016-07-27)
+_____________________________________
+
+* Upgrade the resource pack to Solarus 1.5.
+* Add a quest.dat file to make this a valid quest.
+* Remove empty English dialogs and string files.
+* Fix character misalignment in font file.
+* Add the % symbol in the ALTTP font.
+
