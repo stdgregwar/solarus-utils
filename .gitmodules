@@ -1,0 +1,3 @@
+[submodule "data/scripts/glua"]
+	path = data/scripts/glua
+	url = git@github.com:stdgregwar/glua.git
