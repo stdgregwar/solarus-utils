@@ -38,6 +38,7 @@ sprite{ id = "entities/door_weak_block", description = "Door (weak block)" }
 sprite{ id = "entities/door_weak_wall", description = "Door (weak wall)" }
 sprite{ id = "entities/explosion", description = "Explosion" }
 sprite{ id = "entities/fire", description = "Fire" }
+sprite{ id = "entities/fire_mask", description = "Mask for fire animation" }
 sprite{ id = "entities/grass", description = "Grass" }
 sprite{ id = "entities/hookshot", description = "Hookshot" }
 sprite{ id = "entities/items", description = "Items" }
@@ -250,9 +251,15 @@ sound{ id = "zora", description = "zora" }
 
 
 
+entity{ id = "light", description = "Light casting entity" }
 
 
 font{ id = "alttp", description = "alttp" }
 font{ id = "green_digits", description = "Green digits" }
 font{ id = "white_digits", description = "White digits" }
+
+shader{ id = "cast_shadow1d", description = "Project 1D shadows" }
+shader{ id = "distort", description = "Draw distorted textures" }
+shader{ id = "fire_dist", description = "Draw animated fire on distort mask" }
+shader{ id = "make_shadow1d", description = "Render a 1D shadowmap from an occluder map" }
 

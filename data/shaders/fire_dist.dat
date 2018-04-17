@@ -1,0 +1,48 @@
+shader{
+vertex_source=
+[[
+  #version 330
+
+  uniform mat4 sol_mvp_matrix;
+  uniform mat3 sol_uv_matrix;
+  uniform int sol_time;
+  in vec2 sol_vertex;
+  in vec2 sol_tex_coord;
+  in vec4 sol_color;
+
+  out vec2 sol_vtex_coord;
+  out vec2 plain_tex_coord;
+  out vec4 sol_vcolor;
+  void main() {
+    float time = float(sol_time)*0.0001;
+    gl_Position = sol_mvp_matrix * vec4(sol_vertex,0,1);
+    sol_vcolor = sol_color;
+    sol_vtex_coord = (sol_uv_matrix * vec3(sol_tex_coord,1)).xy;
+    plain_tex_coord = sol_tex_coord + vec2(0,time);
+  }
+]],
+fragment_source=
+[[
+#version 330
+
+//inputs from vertex shader
+in vec2 sol_vtex_coord;
+in vec2 plain_tex_coord;
+
+//uniform values
+uniform sampler2D sol_texture;
+uniform sampler2D plasma;
+uniform int sol_time;
+
+out vec4 color;
+
+void main(void) {
+  float time = float(sol_time)*0.01;
+  float mask = texture(sol_texture,sol_vtex_coord).r;
+  vec4 pls = vec4(sin(time+gl_FragCoord.y*0.5),0.3*cos(time*0.5+1),0,1);
+  pls = (pls+vec4(1))*0.5;
+  color = pls*mask;
+  //color = vec4(1,0,0,1);
+}
+]]
+}
